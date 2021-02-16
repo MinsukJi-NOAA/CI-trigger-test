@@ -15,6 +15,6 @@ jobs:
       run: |
         echo "Hello from sub workflow"
         cat ${GITHUB_EVENT_PATH}
-        sleep 60
+        sleep 180
         echo "================================="
         cat ${GITHUB_EVENT_PATH}
