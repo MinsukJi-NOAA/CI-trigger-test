@@ -9,7 +9,7 @@ on:
 
 jobs:
   job1:
-    if: github.event.review.state == 'approved'
+    if: (github.event_name == 'push') || (github.event.review.state == 'approved')
     runs-on: ubuntu-20.04
 
     steps:
