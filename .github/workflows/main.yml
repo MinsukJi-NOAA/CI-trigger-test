@@ -18,4 +18,7 @@ jobs:
 
     - name: First step
       #if: github.event.review.state == 'approved'
-      run: echo "Review is approved"
+      run: |
+        echo "Review is approved"
+        which jq
+        echo '${{ toJson(github.event) }}'
