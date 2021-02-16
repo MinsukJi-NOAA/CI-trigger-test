@@ -9,7 +9,7 @@ on:
 
 jobs:
   job1:
-    if: (github.event_name == 'push') || (github.event.review.state == 'approved')
+    if: github.event_name == 'push' || (github.event.review.state == 'approved' && toJson(github.event.pull_request.requested_reviewers) == '[]')
     runs-on: ubuntu-20.04
 
     steps:
