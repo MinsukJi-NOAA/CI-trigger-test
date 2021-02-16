@@ -1,0 +1,15 @@
+name: Sub workflow
+
+on:
+  workflow_run:
+    workflows: ["Trigger test"]
+    types:
+      - requested
+
+jobs:
+  job1:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Say hello
+      run: echo "Hello from sub workflow"
