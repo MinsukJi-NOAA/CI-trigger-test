@@ -12,4 +12,9 @@ jobs:
 
     steps:
     - name: Say hello
-      run: echo "Hello from sub workflow"
+      run: |
+        echo "Hello from sub workflow"
+        cat ${GITHUB_EVENT_PATH}
+        sleep 60
+        echo "================================="
+        cat ${GITHUB_EVENT_PATH}
