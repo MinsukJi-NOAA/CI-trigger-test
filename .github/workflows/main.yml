@@ -21,5 +21,5 @@ jobs:
     - name: First step
       run: |
         echo "Review is approved"
-        echo ${{ github.event.review.state }}
-        echo ${{ toJson(github.event.pull_request.requested_reviewers) }}
+        #echo ${{ github.event.review.state }}
+        echo ${{ toJson(github.event) }}
